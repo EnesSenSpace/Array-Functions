@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript Array Metotları</title>
+        <style>
+            h1 {
+                text-align: center;
+                color: red;
+            }
+            table {
+                font-family: Arial, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+            }
+            th {
+                background-color: #04aa6d;
+                color: white;
+                text-align: left;
+                padding: 8px;
+            }
+            td {
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+            tr:nth-child(even) {
+                background-color: #f2f2f2;
+            }
+            tr:hover {
+                background-color: #ddd;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>JavaScript Array Metotları</h1>
+
+        <table>
+            <tr>
+                <th>Metot</th>
+                <th>Açıklama</th>
+                <th>Örnek</th>
+                <th>Sonuç</th>
+            </tr>
+            <tr>
+                <td>Array()</td>
+                <td>Bir dizi oluşturur.</td>
+                <td><code>let numbers = Array(5, 10, 15);</code></td>
+                <td><code>[5, 10, 15]</code></td>
+            </tr>
+            <tr>
+                <td>push()</td>
+                <td>Bir dizinin sonuna bir veya daha fazla eleman ekler.</td>
+                <td>
+                    <code>fruits.push("Elderberry", "Fig");</code>
+                </td>
+                <td>
+                    <code
+                        >["Apple", "Banana", "Cherry", "Durian", "Elderberry",
+                        "Fig"]</code
+                    >
+                </td>
+            </tr>
+            <tr>
+                <td>pop()</td>
+                <td>Bir dizinin son elemanını çıkarır.</td>
+                <td><code>fruits.pop();</code></td>
+                <td><code>["Apple", "Banana", "Cherry"]</code></td>
+            </tr>
+            <tr>
+                <td>shift()</td>
+                <td>Bir dizinin ilk elemanını çıkarır.</td>
+                <td><code>fruits.shift();</code></td>
+                <td><code>["Banana", "Cherry"]</code></td>
+            </tr>
+            <tr>
+                <td>unshift()</td>
+                <td>Bir dizinin başına bir veya daha fazla eleman ekler.</td>
+                <td><code>fruits.unshift("Apple", "Apricot");</code></td>
+                <td>
+                    <code>["Apple", "Apricot", "Banana", "Cherry"]</code>
+                </td>
+            </tr>
+            <tr>
+                <td>slice()</td>
+                <td>
+                    Bir dizinin belirtilen bölümünü yeni bir dizi
+                    <tr>
+                        <td>slice()</td>
+                        <td>
+                            Bir dizinin belirtilen bölümünü yeni bir dizi olarak
+                            döndürür.
+                        </td>
+                        <td>
+                            <code
+                                >let numbers = [1, 2, 3, 4, 5]; let
+                                slicedNumbers = numbers.slice(1, 3);</code
+                            >
+                        </td>
+                        <td><code>[2, 3]</code></td>
+                    </tr>
+                    <tr>
+                        <td>splice()</td>
+                        <td>
+                            Bir dizinin belirtilen bölümünü değiştirir veya
+                            siler ve bu bölüme yeni elemanlar ekler.
+                        </td>
+                        <td>
+                            <code
+                                >let months = ["January", "March", "April",
+                                "June"]; months.splice(1, 0, "February");</code
+                            >
+                        </td>
+                        <td>
+                            <code
+                                >["January", "February", "March", "April",
+                                "June"]</code
+                            >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>concat()</td>
+                        <td>
+                            Bir veya daha fazla dizi ile birleştirilmiş yeni bir
+                            dizi döndürür.
+                        </td>
+                        <td>
+                            <code
+                                >let firstNames = ["John", "Jane"]; let
+                                lastNames = ["Doe", "Smith"]; let allNames =
+                                firstNames.concat(lastNames);</code
+                            >
+                        </td>
+                        <td><code>["John", "Jane", "Doe", "Smith"]</code></td>
+                    </tr>
+                    <tr>
+                        <td>join()</td>
+                        <td>
+                            Bir dizinin tüm elemanlarını birleştirir ve tek bir
+                            dize olarak döndürür.
+                        </td>
+                        <td>
+                            <code
+                                >let fruits = ["Apple", "Banana", "Cherry"]; let
+                                joinedFruits = fruits.join(", ");</code
+                            >
+                        </td>
+                        <td><code>"Apple, Banana, Cherry"</code></td>
+                    </tr>
+                    <tr>
+                        <td>reverse()</td>
+                        <td>Bir dizinin elemanlarını tersine çevirir.</td>
+                        <td>
+                            <code
+                                >let numbers = [1, 2, 3, 4, 5];
+                                numbers.reverse();</code
+                            >
+                        </td>
+                        <td><code>[5, 4, 3, 2, 1]</code></td>
+                    </tr>
+                    <tr>
+                        <td>sort()</td>
+                        <td>Bir dizinin elemanlarını sıralar.</td>
+                        <td>
+                            <code
+                                >let fruits = ["Banana", "Apple", "Cherry"];
+                                fruits.sort();</code
+                            >
+                        </td>
+                        <td><code>["Apple", "Banana", "Cherry"]</code></td>
+                    </tr>
+                    <tr>
+                        <td>forEach()</td>
+                        <td>
+                            Bir dizinin her elemanı için belirtilen işlevi
+                            çağırır.
+                        </td>
+                        <td>
+                            <code
+                                >let numbers = [1, 2, 3];
+                                numbers.forEach(function(item, index) {
+                                console.log(item, index); });</code
+                            >
+                        </td>
+                        <td><code>1 0 2 1 3 2</code></td>
+                    </tr>
+                    <tr>
+                        <td>map()</td>
+                        <td>
+                            Bir dizinin her elemanı için belirtilen işlevi
+                            çağırır ve bu işlevin döndürdüğü değerleri içeren
+                            yeni bir dizi oluşturur.
+                        </td>
+                        <td>
+                            <code>
+                                const numbers = [1, 2, 3, 4, 5]; const squares =
+                                numbers.map(number => number * number);
+                                console.log(squares);
+                            </code>
+                        </td>
+                        <td><code>1, 4, 9, 16, 25</code></td>
+                    </tr>
+                    <tr>
+                        <td>filter()</td>
+                        <td>
+                            Bu metot, bir dizi içerisinde belirli bir koşulu
+                            sağlayan tüm elemanları filtrelemek için kullanılır.
+                            Filtreleme sonucunda oluşan yeni dizi, orijinal
+                            diziyi değiştirmez.
+                        </td>
+                        <td>
+                            <code
+                                >const numbers = [10, 20, 30, 40, 50]; const
+                                filteredNumbers =
+                                numbers.filter(function(number) { return number
+                                > 30; }); console.log(filteredNumbers);</code
+                            >
+                        </td>
+                        <td><code>40, 50</code></td>
+                    </tr>
+                    <tr>
+                        <td>reduce()</td>
+                        <td>
+                            Bu metot, bir dizideki elemanları tek bir değere
+                            indirgemek için kullanılır. Bu işlem sırasında her
+                            bir eleman, önceki işlemin sonucu ile birlikte yeni
+                            bir işleme tabi tutulur.
+                        </td>
+                        <td>
+                            <code
+                                >const numbers = [1, 2, 3, 4, 5]; const sum =
+                                numbers.reduce(function(total, number) { return
+                                total + number; }, 0); console.log(sum);
+                            </code>
+                        </td>
+                        <td><code> 15</code></td>
+                    </tr>
+                    <tr>
+                        <td>find()</td>
+                        <td>
+                            Bu metot, bir dizide belirli bir koşulu sağlayan ilk
+                            elemanı bulmak için kullanılır.
+                        </td>
+                        <td>
+                            <code
+                                >const numbers = [10, 20, 30, 40, 50]; const
+                                firstNumber = numbers.find(function(number) {
+                                return number > 30; });
+                                console.log(firstNumber);
+                            </code>
+                        </td>
+                        <td><code>40</code></td>
+                    </tr>
+                    <tr>
+                        <td>findIndex()</td>
+                        <td>
+                            Bu metot, bir dizide belirli bir koşulu sağlayan ilk
+                            elemanın index'ini bulmak için kullanılır.
+                        </td>
+                        <td>
+                            <code
+                                >const numbers = [10, 20, 30, 40, 50]; const
+                                firstNumberIndex =
+                                numbers.findIndex(function(number) { return
+                                number > 30; }); console.log(firstNumberIndex);
+                            </code>
+                        </td>
+                        <td><code> 3 </code></td>
+                    </tr>
+                    <tr>
+                        <td>some()</td>
+                        <td>
+                            Bu metot, bir dizide belirli bir koşulu sağlayan en
+                            az bir elemanın olup olmadığını kontrol etmek için
+                            kullanılır.
+                        </td>
+                        <td>
+                            <code
+                                >const numbers = [10, 20, 30, 40, 50]; const
+                                hasNumberGreaterThan30 =
+                                numbers.some(function(number) { return number >
+                                30; }); console.log(hasNumberGreaterThan30);
+                            </code>
+                        </td>
+                        <td><code> true </code></td>
+                    </tr>
+                    <tr>
+                        <td>every()</td>
+                        <td>
+                            every() metodu, bir dizi içindeki tüm öğelerin
+                            belirli bir koşulu sağlayıp sağlamadığını kontrol
+                            eder. Eğer koşul tüm öğeler için sağlanıyorsa true,
+                            aksi halde false döndürür.
+                        </td>
+                        <td>
+                            <code
+                                >const numbers = [2, 4, 6, 8, 10]; const
+                                allEvenNumbers = numbers.every(num => num % 2
+                                === 0); console.log(allEvenNumbers);
+                            </code>
+                        </td>
+                        <td><code> true </code></td>
+                    </tr>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
